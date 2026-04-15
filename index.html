@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HYPER-ELECTRIC | MULTI-MODAL DUEL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700&amp;family=Orbitron:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#0e0e0e",
+                    "tertiary-fixed-dim": "#ff7f2f",
+                    "primary-fixed-dim": "#b971ff",
+                    "secondary-fixed-dim": "#58e7ab",
+                    "surface-tint": "#cc97ff",
+                    "error-container": "#a70138",
+                    "surface-bright": "#2c2c2c",
+                    "on-primary-container": "#360061",
+                    "on-secondary-fixed-variant": "#006544",
+                    "surface-container-lowest": "#000000",
+                    "tertiary": "#ff8439",
+                    "secondary-dim": "#58e7ab",
+                    "primary-container": "#c284ff",
+                    "surface-variant": "#262626",
+                    "error": "#ff6e84",
+                    "surface-container-high": "#201f1f",
+                    "tertiary-fixed": "#ff955a",
+                    "primary-dim": "#9c48ea",
+                    "inverse-surface": "#fcf8f8",
+                    "on-tertiary": "#471a00",
+                    "inverse-primary": "#842cd3",
+                    "surface-container-highest": "#262626",
+                    "on-tertiary-fixed-variant": "#632800",
+                    "error-dim": "#d73357",
+                    "primary": "#cc97ff",
+                    "inverse-on-surface": "#565554",
+                    "on-surface": "#ffffff",
+                    "tertiary-container": "#f77113",
+                    "tertiary-dim": "#fd761a",
+                    "outline-variant": "#494847",
+                    "surface-dim": "#0e0e0e",
+                    "on-error-container": "#ffb2b9",
+                    "secondary-fixed": "#69f6b8",
+                    "on-primary-fixed-variant": "#430076",
+                    "on-secondary-container": "#e1ffec",
+                    "on-primary-fixed": "#000000",
+                    "secondary-container": "#006c49",
+                    "on-background": "#ffffff",
+                    "background": "#0e0e0e",
+                    "on-surface-variant": "#adaaaa",
+                    "outline": "#777575",
+                    "on-primary": "#47007c",
+                    "secondary": "#69f6b8",
+                    "on-secondary-fixed": "#00452d",
+                    "on-secondary": "#005a3c",
+                    "on-error": "#490013",
+                    "surface-container": "#1a1919",
+                    "primary-fixed": "#c284ff",
+                    "on-tertiary-fixed": "#2e0e00",
+                    "on-tertiary-container": "#321000",
+                    "surface-container-low": "#131313"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Orbitron", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"],
+                    "space": ["Space Grotesk", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(26, 25, 25, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(204, 151, 255, 0.1);
+        }
+        .glow-emerald {
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+        }
+        .glow-violet {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+        }
+        .marching-ants {
+            background-image: linear-gradient(90deg, #9c48ea 50%, transparent 50%);
+            background-size: 10px 2px;
+            height: 2px;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/40 backdrop-blur-xl flex justify-between items-center px-8 py-4 w-full shadow-[0_4px_30px_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-8">
+<span class="text-2xl font-black italic tracking-widest text-purple-500 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)] font-['Space_Grotesk'] uppercase">HYPER-ELECTRIC</span>
+<div class="hidden md:flex gap-6">
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-neutral-400 hover:text-neutral-100 transition-colors" href="#">PULSE</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-purple-400 border-b-2 border-purple-500 pb-1 shadow-[0_4px_12px_-2px_rgba(168,85,247,0.6)]" href="#">DUEL</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-neutral-400 hover:text-neutral-100 transition-colors" href="#">GUARDIAN</a>
+<a class="font-['Space_Grotesk'] tracking-tighter uppercase text-neutral-400 hover:text-neutral-100 transition-colors" href="#">HEALTH</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-purple-500/10 transition-all duration-300 rounded-lg">
+<span class="material-symbols-outlined text-purple-500" data-icon="notifications_active">notifications_active</span>
+</button>
+<button class="p-2 hover:bg-purple-500/10 transition-all duration-300 rounded-lg">
+<span class="material-symbols-outlined text-purple-500" data-icon="settings">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full border border-primary/30 overflow-hidden">
+<img alt="User System Operator" data-alt="Cyberpunk style portrait of a technical system operator with neon accent lighting and data overlays" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCHlogSe1wI82w8W26EECv7iMCJIFAOJEOcmKEDQTl_Xgt4NHhbGpaObNF2bFxrw2_-tszrDzEUdfTqWBYgPWbmHPV2kt6eFF7AwaHEZTVzw_De1GDWUW7C3oCuB8FPglpgve-MKSfEckWNfK_kllH_JACJ9tcv4D3_ihHQQ38Gw615GgIU8B8P58ErMNGrFs0evusdXcLY2sDjVMNVJZ0oAbz6Fl4G3cANVZEsVQD8e85sx2ib2ZCphMCX1jbHvN3FLDGAI7yIITp"/>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 bg-gradient-to-b from-purple-500/10 to-transparent h-[1px] w-full"></div>
+</nav>
+<!-- SideNavBar (Visible on Desktop) -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-full w-64 z-40 bg-neutral-900/60 backdrop-blur-2xl flex-col pt-24 pb-8 border-r border-purple-500/10 shadow-[10px_0_30px_rgba(0,0,0,0.5)] font-['Space_Grotesk'] font-light">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-sm" data-icon="terminal">terminal</span>
+</div>
+<div>
+<h3 class="text-purple-400 font-bold tracking-tighter text-sm uppercase">CONTROL_UNIT</h3>
+<p class="text-[10px] text-neutral-500">Sector 7-G</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 px-6 py-3 text-neutral-500 hover:text-neutral-200 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="text-sm">Map Layers</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-neutral-500 hover:text-neutral-200 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="traffic">traffic</span>
+<span class="text-sm">Traffic Density</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 bg-gradient-to-r from-purple-600/20 to-transparent text-purple-300 border-l-4 border-purple-500" href="#">
+<span class="material-symbols-outlined" data-icon="electric_bolt">electric_bolt</span>
+<span class="text-sm">Energy Grid</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-neutral-500 hover:text-neutral-200 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="directions_bus">directions_bus</span>
+<span class="text-sm">Fleet Status</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-neutral-500 hover:text-neutral-200 hover:translate-x-1 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="text-sm">Diagnostics</span>
+</a>
+</nav>
+<div class="mt-auto px-6 space-y-4">
+<button class="w-full py-3 bg-primary-dim text-on-surface font-bold text-xs tracking-widest rounded-xl hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] transition-all">
+                EMERGENCY OVERRIDE
+            </button>
+<div class="pt-4 border-t border-purple-500/10 space-y-2">
+<a class="flex items-center gap-4 text-neutral-500 hover:text-neutral-200 text-xs" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="help">help</span> Support
+                </a>
+<a class="flex items-center gap-4 text-neutral-500 hover:text-neutral-200 text-xs" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="history">history</span> Logs
+                </a>
+</div>
+</div>
+</aside>
+<main class="pt-24 pb-32 lg:pl-64 px-4 lg:px-8 max-w-[1600px] mx-auto">
+<!-- Header Section -->
+<header class="mb-12">
+<h1 class="font-headline text-5xl md:text-7xl font-black text-on-surface tracking-tighter uppercase leading-none mb-4">
+                MULTI-MODAL <span class="text-primary drop-shadow-[0_0_15px_rgba(168,85,247,0.3)]">DUEL</span>
+</h1>
+<p class="text-on-surface-variant max-w-2xl text-lg font-light">
+                Neural comparison engine active. Analyzing city pulse across five dimensions of velocity. Select nodes to initiate deep-sync contrast.
+            </p>
+</header>
+<!-- The 5-Way Matrix Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-5 gap-4 mb-12">
+<!-- Walk -->
+<div class="glass-panel p-6 rounded-xl hover:scale-[1.02] transition-transform group cursor-pointer border-l-4 border-primary">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="directions_walk">directions_walk</span>
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase">ACTIVE</span>
+</div>
+<h3 class="font-headline text-xl mb-1">WALK</h3>
+<p class="text-xs text-on-surface-variant mb-6 uppercase tracking-tighter">Zero Emission Lead</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-neutral-500">EFFICIENCY</span>
+<span class="font-headline text-secondary text-2xl drop-shadow-[0_0_10px_rgba(16,185,129,0.3)]">98%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[98%]"></div>
+</div>
+</div>
+</div></section>
+<!-- Bike -->
+<div class="glass-panel p-6 rounded-xl hover:scale-[1.02] transition-transform group cursor-pointer border-l-4 border-transparent hover:border-primary/40">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl group-hover:text-primary transition-colors" data-icon="pedal_bike">pedal_bike</span>
+<span class="text-[10px] font-bold tracking-widest text-neutral-600 uppercase">STANDBY</span>
+</div>
+<h3 class="font-headline text-xl mb-1 text-on-surface-variant group-hover:text-on-surface transition-colors">BIKE</h3>
+<p class="text-xs text-on-surface-variant mb-6 uppercase tracking-tighter">Micro-Mobility Grid</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-neutral-500">EFFICIENCY</span>
+<span class="font-headline text-secondary text-2xl opacity-60">84%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary/40 h-full w-[84%]"></div>
+</div>
+</div>
+</div>
+<!-- Bus -->
+<div class="glass-panel p-6 rounded-xl hover:scale-[1.02] transition-transform group cursor-pointer border-l-4 border-transparent hover:border-primary/40">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl group-hover:text-primary transition-colors" data-icon="directions_bus">directions_bus</span>
+<span class="text-[10px] font-bold tracking-widest text-neutral-600 uppercase">STANDBY</span>
+</div>
+<h3 class="font-headline text-xl mb-1 text-on-surface-variant group-hover:text-on-surface transition-colors">BUS</h3>
+<p class="text-xs text-on-surface-variant mb-6 uppercase tracking-tighter">Surface Arteries</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-neutral-500">EFFICIENCY</span>
+<span class="font-headline text-secondary text-2xl opacity-60">62%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary/40 h-full w-[62%]"></div>
+</div>
+</div>
+</div>
+<!-- Metro -->
+<div class="glass-panel p-6 rounded-xl hover:scale-[1.02] transition-transform group cursor-pointer border-l-4 border-primary bg-primary/5">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="subway">subway</span>
+<span class="text-[10px] font-bold tracking-widest text-primary uppercase">ACTIVE</span>
+</div>
+<h3 class="font-headline text-xl mb-1">METRO</h3>
+<p class="text-xs text-on-surface-variant mb-6 uppercase tracking-tighter">Deep Layer Transit</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-neutral-500">EFFICIENCY</span>
+<span class="font-headline text-secondary text-2xl drop-shadow-[0_0_10px_rgba(16,185,129,0.3)]">91%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[91%]"></div>
+</div>
+</div>
+</div>
+<!-- Cab -->
+<div class="glass-panel p-6 rounded-xl hover:scale-[1.02] transition-transform group cursor-pointer border-l-4 border-transparent hover:border-primary/40">
+<div class="flex justify-between items-start mb-8">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl group-hover:text-primary transition-colors" data-icon="local_taxi">local_taxi</span>
+<span class="text-[10px] font-bold tracking-widest text-neutral-600 uppercase">STANDBY</span>
+</div>
+<h3 class="font-headline text-xl mb-1 text-on-surface-variant group-hover:text-on-surface transition-colors">CAB</h3>
+<p class="text-xs text-on-surface-variant mb-6 uppercase tracking-tighter">Point-to-Point Flux</p>
+<div class="space-y-4">
+<div class="flex justify-between items-end">
+<span class="text-[10px] text-neutral-500">EFFICIENCY</span>
+<span class="font-headline text-error text-2xl">38%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-error/40 h-full w-[38%]"></div>
+</div>
+</div>
+</div>
+<!-- Matrix Comparison Container -->
+<div class="glass-panel rounded-2xl p-8 mb-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] rounded-full -mr-32 -mt-32"></div>
+<div class="flex flex-col md:flex-row justify-between items-center mb-12 gap-8">
+<div class="text-center md:text-left">
+<h2 class="font-headline text-3xl font-bold mb-2">NEURAL DUEL ENGINE</h2>
+<p class="text-on-surface-variant font-light">Contrasting active transit streams for optimal deployment.</p>
+</div>
+<div class="flex gap-4">
+<div class="px-6 py-3 border border-primary/20 rounded-full flex items-center gap-3">
+<span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
+<span class="text-xs font-bold tracking-widest uppercase">SYDNEY_CORE_GRID</span>
+</div>
+</div>
+</div>
+<!-- Bento Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Data Visualizer Left -->
+<div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-low p-6 rounded-xl border border-white/5">
+<h4 class="text-[10px] font-bold text-neutral-500 mb-6 uppercase tracking-[0.2em]">Flux Comparison</h4>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" data-icon="speed">speed</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between text-[10px] mb-1">
+<span class="text-primary uppercase font-bold">Walk Node</span>
+<span class="text-on-surface">5.2 KM/H AVG</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full">
+<div class="bg-primary h-full w-[15%]"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-lg bg-primary-dim/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-dim" data-icon="electric_subway">subway</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between text-[10px] mb-1">
+<span class="text-primary-dim uppercase font-bold">Metro Node</span>
+<span class="text-on-surface">62.8 KM/H AVG</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full">
+<div class="bg-primary-dim h-full w-[85%]"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-xl border border-white/5 flex flex-col justify-center items-center">
+<h4 class="text-[10px] font-bold text-neutral-500 mb-4 uppercase tracking-[0.2em]">Efficiency Coefficient</h4>
+<div class="relative w-32 h-32">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-secondary drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]" cx="64" cy="64" fill="transparent" r="58" stroke="currentColor" stroke-dasharray="364.4" stroke-dashoffset="36.4" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline text-3xl font-black">0.92</span>
+<span class="text-[8px] text-secondary font-bold uppercase tracking-widest">STABLE</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 relative h-64 rounded-xl overflow-hidden group">
+<img alt="Transit Map" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Futuristic glowing city map visualization with data streams and neon purple transit lines at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLov3_2oRM_yLEsq148ySiXBb2pYcWKWSBIwXNsX1l_2szdUrBtnmK9Ytmy0SbriUWVBRjceqvKycdA6-BdzcmKOboDFvDD08XrUzwUeImt5o9OIBFEDKeHqyBB98l1NVoMON-FJcsjt2uY4FsXkr4qdJi8BIiB9u_Eeak18IapMEKBwk7Ym_BzN-hAAaZnBYB9OA7P9Iy00YBPiVbG8krEBeLXHjpcSrTAKJ7r5eEiDCHTRNP0uzqNfOXoN7Ho0VIrqjWgHaaiXyc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="text-[10px] font-black uppercase text-on-surface">Real-Time Sync active</span>
+</div>
+<h3 class="font-headline text-xl text-on-surface tracking-tighter">SYDNEY CENTRAL NODE</h3>
+</div>
+</div>
+</div>
+<!-- Selection Neural Cards Right -->
+<div class="md:col-span-4 space-y-4">
+<h4 class="text-[10px] font-bold text-neutral-500 px-2 uppercase tracking-[0.2em]">Neural Selection Logic</h4>
+<div class="bg-surface-container p-4 rounded-xl border-l-2 border-primary group hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-primary tracking-widest uppercase">Path A: Kinetic</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant" data-icon="bolt">bolt</span>
+</div>
+<p class="text-sm text-on-surface leading-snug">Prioritize human-powered transit for maximum metabolic credit and zero grid drain.</p>
+<div class="mt-4 pt-4 border-t border-white/5 flex justify-between items-center">
+<span class="text-[10px] text-on-surface-variant">COST: <span class="text-secondary font-bold">0.00 E-CRED</span></span>
+<span class="material-symbols-outlined text-primary text-lg" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="bg-surface-container p-4 rounded-xl border-l-2 border-primary-dim/30 group hover:bg-surface-container-high transition-all cursor-pointer">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-on-surface-variant tracking-widest uppercase">Path B: Velocity</span>
+<span class="material-symbols-outlined text-sm text-on-surface-variant" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-snug">Neural metro sync. 4-minute overhead. Direct high-velocity channel extraction.</p>
+<div class="mt-4 pt-4 border-t border-white/5 flex justify-between items-center">
+<span class="text-[10px] text-on-surface-variant">COST: <span class="text-primary-dim font-bold">12.50 E-CRED</span></span>
+<span class="material-symbols-outlined text-on-surface-variant text-lg" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<div class="bg-primary/20 p-6 rounded-xl flex flex-col items-center text-center group transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary text-4xl mb-2" data-icon="psychology">psychology</span>
+<h4 class="font-headline text-lg mb-1 uppercase italic">AUTONOMOUS OPTIMIZE</h4>
+<p class="text-[10px] text-primary uppercase font-bold tracking-widest mb-4">Let AI decide the duel outcome</p>
+<button class="w-full py-2 bg-primary text-on-primary font-black text-xs rounded-lg uppercase tracking-widest">INITIATE SYNC</button>
+</div>
+</div>
+</div>
+</div>
+<!-- System Metrics Row -->
+<section class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="glass-panel p-6 rounded-xl">
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest mb-2 font-bold">Grid Load</p>
+<p class="text-3xl font-headline font-black text-secondary">42.8%</p>
+<div class="marching-ants mt-4 opacity-30"></div>
+</div>
+<div class="glass-panel p-6 rounded-xl">
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest mb-2 font-bold">Congestion index</p>
+<p class="text-3xl font-headline font-black text-on-surface">LOW</p>
+<div class="marching-ants mt-4 opacity-10"></div>
+</div>
+<div class="glass-panel p-6 rounded-xl">
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest mb-2 font-bold">Active Units</p>
+<p class="text-3xl font-headline font-black text-primary">1,240</p>
+<div class="marching-ants mt-4 opacity-30"></div>
+</div>
+<div class="glass-panel p-6 rounded-xl">
+<p class="text-[10px] text-neutral-500 uppercase tracking-widest mb-2 font-bold">Latency</p>
+<div class="flex items-center gap-2">
+<p class="text-3xl font-headline font-black text-on-surface">4ms</p>
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary text-[8px] font-bold rounded border border-secondary/20 uppercase tracking-tighter">OPTIMAL</span>
+</div>
+<div class="marching-ants mt-4 opacity-10"></div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile-First Floating Shell) -->
+<nav class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-12 py-3 bg-neutral-950/80 backdrop-blur-lg w-auto min-w-[400px] rounded-full px-6 border border-purple-500/20 shadow-[0_0_40px_rgba(168,85,247,0.15)] font-['Space_Grotesk'] text-[10px] font-bold tracking-widest">
+<a class="flex flex-col items-center gap-1 text-neutral-600 hover:text-purple-300 transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="dashboard_customize">dashboard_customize</span>
+<span>SYSTEM_HUD</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-neutral-600 hover:text-purple-300 transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="equalizer">equalizer</span>
+<span>METRICS</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-purple-400 drop-shadow-[0_0_5px_rgba(168,85,247,0.8)] scale-110" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="warning">warning</span>
+<span>ALERTS</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-neutral-600 hover:text-purple-300 transition-all" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="lan">lan</span>
+<span>NETWORK</span>
+</a>
+</nav>
+</body></html>
